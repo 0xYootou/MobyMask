@@ -29,7 +29,7 @@ const main = async () => {
   await deploy("PhisherRegistry", {
     // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
     from: deployer,
-    args: [ "MobyMask" ],
+    args: ["MobyMask"],
     log: true,
   });
   // use for local token bridging

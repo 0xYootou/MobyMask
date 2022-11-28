@@ -38,7 +38,9 @@ export default function Members(props) {
             let parsedInvitation;
             let rawLoaded = document.cookie;
             if (rawLoaded) {
-              parsedInvitation = JSON.parse(rawLoaded);
+              try {
+                parsedInvitation = JSON.parse(rawLoaded);
+              } catch (e) {}
             }
             if (!parsedInvitation || parsedInvitation === "null") {
               parsedInvitation = JSON.parse(query.get("invitation"));

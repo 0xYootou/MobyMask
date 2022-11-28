@@ -12,7 +12,7 @@ export default async function reportPhishers(phishers, provider, invitation) {
     contractInfo,
     invitation,
   });
-
+  console.log("phishers", phishers);
   const wallet = provider.getSigner();
   const registry = await attachRegistry(wallet);
 
